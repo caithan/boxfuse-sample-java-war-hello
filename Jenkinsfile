@@ -14,12 +14,12 @@ pipeline {
         }
         stage('build') {
             steps {
-              bat 'mvn clean install -f boxfuse-sample-java-war-hello/pom.xml'
+              bat 'mvn clean install'
             }
         }
         stage('codeQuality') {
             steps {
-               bat 'mvn sonar:sonar -f boxfuse-sample-java-war-hello/pom.xml'            
+               bat 'mvn sonar:sonar'            
             }
         }
         stage('deploy') {
