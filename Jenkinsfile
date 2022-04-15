@@ -24,7 +24,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-            deploy adapters: [tomcat9(credentialsId: 'tomcat_robot', path: '', url: 'http://localhost:7000/')], contextPath: ' boxfuse-sample-java-war-hello', war: '**/*.war'
+           deploy adapters: [tomcat9(credentialsId: 'tomcat_robot', path: '', url: 'http://localhost:7000/')], contextPath: 'boxfuse-sample-java-war-hello', war: '**/*.war'
             }
         }
     }
